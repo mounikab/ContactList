@@ -1,0 +1,30 @@
+﻿@model ContactList.Models.Contact
+@{
+    ViewData["Title"] = "Edit";
+}
+@using (Html.BeginForm())
+{
+  
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.EditorFor(model => model.Address)
+
+        </th>
+        <th>
+            @Html.EditorFor(model => model.Email)
+        </th>
+        <th>
+            @Html.EditorFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+   
+</table>
+<div>
+    <input type="submit" value="Save" class="btn btn-default" />
+</div>
+}
